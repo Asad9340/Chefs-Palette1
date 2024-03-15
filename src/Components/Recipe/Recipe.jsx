@@ -1,7 +1,7 @@
 import { MdAccessTimeFilled } from 'react-icons/md';
 import { SlEnergy } from 'react-icons/sl';
 
-function Recipe({ recipe }) {
+function Recipe({ recipe, handleCook }) {
   const {
     recipe_image,
     recipe_name,
@@ -10,13 +10,12 @@ function Recipe({ recipe }) {
     calories,
     ingredients,
   } = recipe;
-  console.log(recipe);
   return (
     <div className="rounded-lg border p-2">
       <img
         src={recipe_image}
         alt="Laptop"
-        className="w-full h-40 rounded-md object-cover"
+        className=" h-48 w-full rounded-md object-cover"
       />
       <div className="p-4">
         <h1 className="inline-flex items-center text-lg font-semibold">
@@ -28,8 +27,15 @@ function Recipe({ recipe }) {
           <h3 className="text-lg font-medium">
             Ingredients: {ingredients.length}
           </h3>
-          {ingredients.map((item, index) =>  index < 3 ? <li key={index}>{ item}</li>:null)}
+          {ingredients.map((item, index) =>
+            index < 3 ? (
+              <li className="text-[#878787] text-base" key={index}>
+                {item}
+              </li>
+            ) : null
+          )}
         </div>
+        <hr className="my-3" />
         <div className="mt-4 flex gap-3 justify-between">
           <div className="flex gap-2 items-center">
             <MdAccessTimeFilled />
@@ -41,6 +47,7 @@ function Recipe({ recipe }) {
           </div>
         </div>
         <button
+          onClick={() => handleCook(recipe)}
           type="button"
           className="mt-4 w-full rounded-md bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         >

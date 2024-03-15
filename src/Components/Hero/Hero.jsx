@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className="relative max-w-5xl mx-auto md:mt-10">
+    <div className="relative max-w-6xl mx-auto md:mt-10">
       <div>
         <img
           className="w-full"
@@ -10,7 +10,7 @@ function Hero() {
       </div>
       <div className="absolute top-[50%] translate-y-[-50%] text-center space-y-4 text-white">
         <h2 className="text-2xl md:text-5xl font-bold">
-          Discover an exceptional cooking <br /> class  tailored for you!
+          Discover an exceptional cooking <br /> class tailored for you!
         </h2>
         <p className="px-6 md:px-10 lg:px-14 text-sm md:text-base">
           Step into our kitchen and lets cook up some magic together! From

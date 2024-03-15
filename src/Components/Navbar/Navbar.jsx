@@ -1,8 +1,8 @@
 import { CgProfile } from 'react-icons/cg';
 function Navbar() {
   return (
-    <div className="relative w-full bg-white">
-      <div className="mx-auto flex max-w-5xl items-center justify-between">
+    <div className="relative w-full bg-white m-3 md:m-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between">
         <div className="inline-flex items-center space-x-2">
           <span className="font-bold">Chefs Palette</span>
         </div>
@@ -42,7 +42,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className='flex items-center'>
+        <div className="flex items-center">
           <div className="flex grow justify-end">
             <input
               className="flex h-10  rounded-full bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
