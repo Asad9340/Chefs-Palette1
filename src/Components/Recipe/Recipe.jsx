@@ -1,22 +1,44 @@
+import { MdAccessTimeFilled } from 'react-icons/md';
+import { SlEnergy } from 'react-icons/sl';
+
 function Recipe({ recipe }) {
-  const { recipe_image, recipe_name, short_description } = recipe;
-  console.log(recipe)
+  const {
+    recipe_image,
+    recipe_name,
+    short_description,
+    preparing_time,
+    calories,
+    ingredients,
+  } = recipe;
+  console.log(recipe);
   return (
-    <div className="w-[300px] rounded-lg border p-2">
+    <div className="rounded-lg border p-2">
       <img
         src={recipe_image}
         alt="Laptop"
-        className="w-full rounded-t-md object-cover"
+        className="w-full h-40 rounded-md object-cover"
       />
       <div className="p-4">
         <h1 className="inline-flex items-center text-lg font-semibold">
           {recipe_name}
         </h1>
         <p className="mt-3 text-sm text-gray-600">{short_description}</p>
-        <hr className="my-3"/>
-        <div className="mt-4">
-          <div></div>
-          <div></div>
+        <hr className="my-3" />
+        <div>
+          <h3 className="text-lg font-medium">
+            Ingredients: {ingredients.length}
+          </h3>
+          {ingredients.map((item, index) =>  index < 3 ? <li key={index}>{ item}</li>:null)}
+        </div>
+        <div className="mt-4 flex gap-3 justify-between">
+          <div className="flex gap-2 items-center">
+            <MdAccessTimeFilled />
+            <p>{preparing_time}</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <SlEnergy />
+            <p>{calories}</p>
+          </div>
         </div>
         <button
           type="button"
@@ -29,4 +51,4 @@ function Recipe({ recipe }) {
   );
 }
 
-export default Recipe
+export default Recipe;

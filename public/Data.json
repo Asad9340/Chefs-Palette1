@@ -56,7 +56,7 @@
     "recipe_image": "https://i.ibb.co/m69NqKQ/homemade-pizza.jpg",
     "recipe_id": 4,
     "recipe_name": "Homemade Pizza",
-    "short_description": "A customizable and delicious pizza made with homemade dough and your favorite toppings.",
+    "short_description": "A customizable pizza made with homemade dough and your favorite toppings.",
     "ingredients": [
       "1 batch homemade pizza dough",
       "1/2 cup pizza sauce",
@@ -65,7 +65,7 @@
       "Fresh basil leaves for garnish"
     ],
     "preparing_time": "40 min",
-    "calories": "300 calories per slice"
+    "calories": "300 calories"
   },
   {
     "recipe_image": "https://i.ibb.co/4JwZTkg/chocolate-chips.jpg",
@@ -84,12 +84,12 @@
       "2 cups semisweet chocolate chips"
     ],
     "preparing_time": "20 min",
-    "calories": "150 calories per cookie"
+    "calories": "150 calories"
   },
   {
     "recipe_image": "https://i.ibb.co/sjYk4Lb/salmon.jpg",
     "recipe_id": 6,
-    "recipe_name": "Grilled Salmon with Lemon Herb Butter",
+    "recipe_name": "Grilled Salmon with Herb Butter",
     "short_description": "Delicious grilled salmon fillets topped with a flavorful lemon herb butter sauce.",
     "ingredients": [
       "4 salmon fillets",
@@ -103,6 +103,6 @@
       "Lemon slices for garnish"
     ],
     "preparing_time": "15 min",
-    "calories": "300 calories per serving"
+    "calories": "300 calories"
   }
 ]
