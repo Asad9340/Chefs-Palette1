@@ -8,20 +8,20 @@ function Hero() {
           alt=""
         />
       </div>
-      <div className="absolute top-[50%] translate-y-[-50%] text-center space-y-4 text-white">
-        <h2 className="text-2xl md:text-5xl font-bold">
+      <div className="absolute top-[50%] translate-y-[-50%] text-center space-y-1 md:space-y-4 text-white">
+        <h2 className="text-xl md:text-5xl font-bold">
           Discover an exceptional cooking <br /> class tailored for you!
         </h2>
-        <p className="px-6 md:px-10 lg:px-14 text-sm md:text-base">
+        <p className="px-6 md:px-10 lg:px-14 text-xs md:text-base">
           Step into our kitchen and lets cook up some magic together! From
           savory classics to delectable desserts, weve got recipes to satisfy
-          every craving. Join us on a flavorful adventure!
+          every craving!
         </p>
         <div className=" flex gap-4 md:gap-6 justify-center">
-          <button className="py-2 px-6 bg-[#0BE58A] text-gray-900 rounded-full font-semibold">
+          <button className="py-1 md:py-2 px-4 md:px-6 bg-[#0BE58A] text-gray-900 rounded-full font-semibold text-sm md:text-base">
             Explore Now
           </button>
-          <button className="py-2 px-6 hover:bg-[#0BE58A] border border-gray-400 duration-300 text-white rounded-full font-semibold">
+          <button className="py-1 md:py-2 px-4 md:px-6 hover:bg-[#0BE58A] border border-gray-400 duration-300 text-white rounded-full font-semibold">
             Explore Now
           </button>
         </div>
