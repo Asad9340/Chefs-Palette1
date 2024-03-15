@@ -11,6 +11,7 @@ import Display from './Components/Display/Display';
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [btnRecipes, setBtnRecipes] = useState([]);
+  const [deleteItems, setDeleteItems] = useState([]);
   const handleCook = recipe => {
     const isExist = btnRecipes.find(
       item => item.recipe_id === recipe.recipe_id
@@ -40,11 +41,30 @@ function App() {
       });
     }
   };
+  const handlePreparing = item => {
+    handlePendiing(item);
+    handleResolved(item);
+  };
   const handlePendiing = item => {
-    const newItems = btnRecipes.filter(
-      r => r.recipe_id !== item.recipe_id
-    );
+    const newItems = btnRecipes?.filter(r => r.recipe_id !== item.recipe_id);
     setBtnRecipes(newItems);
+    toast.info('Item is now under cooking', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
+  };
+  const handleResolved = item => {
+    const newDeletedItems = btnRecipes.filter(
+      r => r.recipe_id === item.recipe_id
+    );
+    const newDeleteItems = [...deleteItems, newDeletedItems];
+    setDeleteItems(newDeleteItems);
   };
   useEffect(() => {
     const loadData = async () => {
@@ -67,7 +87,8 @@ function App() {
         <div className="col-span-4">
           <Display
             btnRecipes={btnRecipes}
-            handlePendiing={handlePendiing}
+            handlePreparing={handlePreparing}
+            deleteItems={deleteItems}
           ></Display>
         </div>
       </div>
