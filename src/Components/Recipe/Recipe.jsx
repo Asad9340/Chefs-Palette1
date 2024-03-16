@@ -39,11 +39,11 @@ function Recipe({ recipe, handleCook }) {
         <div className="mt-4 flex gap-3 justify-between">
           <div className="flex gap-2 items-center">
             <MdAccessTimeFilled />
-            <p>{preparing_time}</p>
+            <p>{preparing_time} min</p>
           </div>
           <div className="flex gap-2 items-center">
             <SlEnergy />
-            <p>{calories}</p>
+            <p>{calories} calories</p>
           </div>
         </div>
         <button

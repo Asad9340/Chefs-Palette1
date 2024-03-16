@@ -1,5 +1,5 @@
-function Display({ btnRecipes, handlePreparing, deleteItems }) {
-  // console.log(deleteItems)
+function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
+  console.log(cooking);
   return (
     <div className=" m-3 md:m-6">
       <div>
@@ -27,7 +27,7 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
                   <td>{item.calories}</td>
                   <td>
                     <button
-                      onClick={() => handlePreparing(item)}
+                      onClick={() => handlePreparing(item.recipe_id)}
                       className="px-3 py-2 bg-[#0BE58A] hover:bg-green-500 active:bg-green-700 rounded-full my-2 text-xs font-semibold text-[#150B2B]"
                     >
                       Preparing
@@ -67,12 +67,12 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
             <tr>
               <td>
                 Total time:
-                {deleteItems?.reduce(
-                  (a, c) => console.log(a, c[0].preparing_time.split(' ')[0]),
-                  0
-                )}
+                {deleteItems.reduce((a, c) => a + c[0].preparing_time, 0)} min
               </td>
-              <td>Total Calories: </td>
+              <td>
+                Total Calories:{' '}
+                {deleteItems.reduce((a, c) => a + c[0].calories, 0)} calories
+              </td>
             </tr>
           </tbody>
         </table>

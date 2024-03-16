@@ -12,6 +12,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [btnRecipes, setBtnRecipes] = useState([]);
   const [deleteItems, setDeleteItems] = useState([]);
+  const [cooking,setCooking] = useState([]);
   const handleCook = recipe => {
     const isExist = btnRecipes.find(
       item => item.recipe_id === recipe.recipe_id
@@ -41,12 +42,12 @@ function App() {
       });
     }
   };
-  const handlePreparing = item => {
-    handlePendiing(item);
-    handleResolved(item);
+  const handlePreparing = id => {
+    handlePendiing(id);
+    handleResolved(id);
   };
-  const handlePendiing = item => {
-    const newItems = btnRecipes?.filter(r => r.recipe_id !== item.recipe_id);
+  const handlePendiing = id => {
+    const newItems = btnRecipes?.filter(item => item.recipe_id !== id);
     setBtnRecipes(newItems);
     toast.info('Item is now under cooking', {
       position: 'top-right',
@@ -59,12 +60,11 @@ function App() {
       theme: 'colored',
     });
   };
-  const handleResolved = item => {
-    const newDeletedItems = btnRecipes.filter(
-      r => r.recipe_id === item.recipe_id
-    );
+  const handleResolved = id => {
+    const newDeletedItems = btnRecipes.filter(item => item.recipe_id === id);
     const newDeleteItems = [...deleteItems, newDeletedItems];
     setDeleteItems(newDeleteItems);
+    setCooking([...cooking, newDeletedItems]);
   };
   useEffect(() => {
     const loadData = async () => {
@@ -89,6 +89,7 @@ function App() {
             btnRecipes={btnRecipes}
             handlePreparing={handlePreparing}
             deleteItems={deleteItems}
+            cooking={cooking}
           ></Display>
         </div>
       </div>

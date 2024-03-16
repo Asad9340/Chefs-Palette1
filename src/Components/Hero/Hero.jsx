@@ -2,7 +2,7 @@ import './Hero.css';
 function Hero() {
   return (
     <div className="mx-auto flex max-w-6xl items-center justify-between">
-      <div className="banner rounded-3xl p-5 lg:px-52 lg:py-32 space-y-10 text-center">
+      <div className="banner rounded-3xl p-5 lg:px-52 lg:py-32 space-y-10 text-center m-3 md:m-6">
         <h3 className=" text-white text-2xl lg:text-5xl font-bold">
           Discover an exceptional cooking class tailored for you!
         </h3>
