@@ -1,7 +1,6 @@
-function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
-  console.log(cooking);
+function Display({ btnRecipes, handlePreparing, deleteItems }) {
   return (
-    <div className=" m-3 md:m-6">
+    <div>
       <div>
         <div>
           <h3 className="text-2xl font-semibold text-center">
@@ -11,7 +10,8 @@ function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
         </div>
         <table className="table-auto w-full text-center p-2">
           <thead>
-            <tr className="bg-gray-900 text-white">
+            <tr>
+              <th>Sr.</th>
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
@@ -21,9 +21,10 @@ function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
           <tbody>
             {btnRecipes?.map((item, index) => {
               return (
-                <tr key={index} className="border border-gray-500 list-decimal">
-                  <td className="border-r pr-2">{item.recipe_name}</td>
-                  <td className="border-r pr-2">{item.preparing_time}</td>
+                <tr key={index} className=" text-sm">
+                  <th className=" pr-2">{index + 1}</th>
+                  <td className=" pr-2">{item.recipe_name}</td>
+                  <td className=" pr-2">{item.preparing_time}</td>
                   <td>{item.calories}</td>
                   <td>
                     <button
@@ -48,7 +49,7 @@ function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
         </div>
         <table className="table-auto w-full text-center p-2">
           <thead>
-            <tr className="bg-gray-900 text-white">
+            <tr>
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
@@ -57,19 +58,19 @@ function Display({ btnRecipes, handlePreparing, deleteItems, cooking }) {
           <tbody>
             {deleteItems?.map((pd, index) => {
               return (
-                <tr key={index} className="border border-gray-500">
-                  <td className="border-r pr-2">{pd[0]?.recipe_name}</td>
-                  <td className="border-r pr-2">{pd[0]?.preparing_time}</td>
-                  <td>{pd[0]?.calories}</td>
+                <tr key={index} className=" border-gray-500 text-sm">
+                  <td className="pr-2">{pd[0]?.recipe_name}</td>
+                  <td className=" pr-2">{pd[0]?.preparing_time}</td>
+                  <td className="pr-2">{pd[0]?.calories}</td>
                 </tr>
               );
             })}
-            <tr>
+            <tr className="bg-gray-200">
               <td>
                 Total time:
                 {deleteItems.reduce((a, c) => a + c[0].preparing_time, 0)} min
               </td>
-              <td>
+              <td colSpan={2}>
                 Total Calories:{' '}
                 {deleteItems.reduce((a, c) => a + c[0].calories, 0)} calories
               </td>

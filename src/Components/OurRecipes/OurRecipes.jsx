@@ -1,6 +1,6 @@
 function OurRecipes() {
   return (
-    <div className="my-6 md:my-10 lg:my-14  max-w-6xl mx-auto space-y-4 m-3 md:m-6">
+    <div className="max-w-6xl mx-auto px-3 md:px-6">
       <h2 className="text-3xl md:text-4xl font-semibold text-center">
         Our Recipes
       </h2>

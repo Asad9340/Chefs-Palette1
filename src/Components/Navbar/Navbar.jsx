@@ -69,7 +69,7 @@ function Navbar() {
               name=""
               id=""
             />
-            <CiSearch  className='absolute top-3 left-4 text-lg'/>
+            <CiSearch className="absolute top-3 left-4 text-lg  hidden md:block" />
           </div>
           <CgProfile className="text-4xl bg-[#0BE58A] p-2 rounded-full" />
         </div>
