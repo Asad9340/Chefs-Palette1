@@ -1,5 +1,5 @@
 import { MdAccessTimeFilled } from 'react-icons/md';
-import { SlEnergy } from 'react-icons/sl';
+import { BsFire } from 'react-icons/bs';
 
 function Recipe({ recipe, handleCook }) {
   const {
@@ -42,7 +42,7 @@ function Recipe({ recipe, handleCook }) {
             <p>{preparing_time} min</p>
           </div>
           <div className="flex gap-2 items-center">
-            <SlEnergy />
+            <BsFire />
             <p>{calories} calories</p>
           </div>
         </div>

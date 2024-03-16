@@ -1,72 +1,77 @@
 import { CgProfile } from 'react-icons/cg';
+import { CiSearch } from 'react-icons/ci';
+
 function Navbar() {
   return (
-    <div className="relative w-full bg-white m-3 md:m-6">
-      <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <div className="inline-flex items-center space-x-2">
-          <span className="font-bold">Chefs Palette</span>
+    <div className="mx-auto flex max-w-6xl items-center justify-between">
+      <div className="navbar bg-base-100 py-4 md:py-6 mx-3 md:mx-6">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Recipes</a>
+              </li>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Search</a>
+              </li>
+            </ul>
+          </div>
+          <a className="btn btn-ghost text-xl md:text-3xl font-bold">
+            Chefs Palette
+          </a>
         </div>
-        <div className="hidden lg:block">
-          <ul className="ml-12 inline-flex space-x-8">
+        <div className="navbar-center hidden lg:flex text-slate-900 text-opacity-70 ">
+          <ul className="menu menu-horizontal px-1 text-base ">
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-              >
-                Home
-              </a>
+              <a>Home</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-              >
-                Recipes
-              </a>
+              <a>Recipes</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-              >
-                About
-              </a>
+              <a>About</a>
             </li>
             <li>
-              <a
-                href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
-              >
-                Search
-              </a>
+              <a>Search</a>
             </li>
           </ul>
         </div>
-        <div className="flex items-center">
-          <div className="flex grow justify-end">
+        <div className="navbar-end gap-2">
+          <div className="relative">
             <input
-              className="flex h-10  rounded-full bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
               type="text"
-              placeholder="Search items"
+              className="border border-red-800 h-10 rounded-full hidden md:block pl-10"
+              name=""
+              id=""
             />
+            <CiSearch  className='absolute top-3 left-4 text-lg'/>
           </div>
-          <div className="ml-2 mt-2 hidden lg:block bg-[#0BE58A] rounded-full p-2">
-            <CgProfile className="text-xl" />
-          </div>
-        </div>
-        <div className="ml-2 lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-          >
-            <line x1="4" y1="12" x2="20" y2="12"></line>
-            <line x1="4" y1="6" x2="20" y2="6"></line>
-            <line x1="4" y1="18" x2="20" y2="18"></line>
-          </svg>
+          <CgProfile className="text-4xl bg-[#0BE58A] p-2 rounded-full" />
         </div>
       </div>
     </div>
