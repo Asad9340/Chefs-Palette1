@@ -1,28 +1,22 @@
+import './Hero.css';
 function Hero() {
   return (
-    <div className="relative max-w-6xl mx-auto md:mt-10">
-      <div>
-        <img
-          className="w-full"
-          src="../../../public/images/banner.jpg"
-          alt=""
-        />
-      </div>
-      <div className="absolute top-[50%] translate-y-[-50%] text-center space-y-1 md:space-y-4 text-white">
-        <h2 className="text-xl md:text-5xl font-bold">
-          Discover an exceptional cooking <br /> class tailored for you!
-        </h2>
-        <p className="px-6 md:px-10 lg:px-14 text-xs md:text-base">
+    <div className="mx-auto flex max-w-6xl items-center justify-between">
+      <div className="banner rounded-3xl p-5 lg:px-52 lg:py-32 space-y-10 text-center">
+        <h3 className=" text-white text-2xl lg:text-5xl font-bold">
+          Discover an exceptional cooking class tailored for you!
+        </h3>
+        <p className="text-white text-sm lg:text-lg">
           Step into our kitchen and lets cook up some magic together! From
           savory classics to delectable desserts, weve got recipes to satisfy
           every craving!
         </p>
-        <div className=" flex gap-4 md:gap-6 justify-center">
-          <button className="py-1 md:py-2 px-4 md:px-6 bg-[#0BE58A] text-gray-900 rounded-full font-semibold text-sm md:text-base">
+        <div className="space-x-6">
+          <button className="rounded-3xl bg-[#0BE58A] text-white px-3 md:px-6 py-1 md:py-2  duration-300 font-semibold">
             Explore Now
           </button>
-          <button className="py-1 md:py-2 px-4 md:px-6 hover:bg-[#0BE58A] border border-gray-400 duration-300 text-white rounded-full font-semibold">
-            Explore Now
+          <button className="rounded-3xl border border-white text-white px-3 md:px-6 py-1 md:py-2 hover:bg-[#0BE58A] duration-300 font-semibold">
+            Our Feedback
           </button>
         </div>
       </div>
