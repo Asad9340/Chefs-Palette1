@@ -67,7 +67,7 @@ function Navbar() {
               type="text"
               className="border border-red-800 h-10 rounded-full hidden md:block pl-10"
               name=""
-              id=""
+              placeholder='Search here...'
             />
             <CiSearch className="absolute top-3 left-4 text-lg  hidden md:block" />
           </div>

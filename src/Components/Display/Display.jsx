@@ -1,6 +1,6 @@
 function Display({ btnRecipes, handlePreparing, deleteItems }) {
   return (
-    <div className="mx-3 mb-6">
+    <div className="mx-4 mb-6">
       <div>
         <div>
           <h3 className="text-xl md:text-2xl font-semibold text-center">

@@ -12,10 +12,10 @@ function Hero() {
           every craving!
         </p>
         <div className="space-x-6">
-          <button className="rounded-3xl bg-[#0BE58A] text-white px-3 md:px-6 py-1 md:py-2  duration-300 font-semibold text-sm md:text-base">
+          <button className="rounded-md bg-[#0BE58A] text-white px-3 md:px-6 py-1 md:py-2  duration-300 font-semibold text-sm md:text-base">
             Explore Now
           </button>
-          <button className="rounded-3xl border border-white text-white px-3 md:px-6 py-1 md:py-2 hover:bg-[#0BE58A] duration-300 font-semibold  text-sm md:text-base">
+          <button className="rounded-md border border-white text-white px-3 md:px-6 py-1 md:py-2 hover:bg-[#0BE58A] duration-300 font-semibold  text-sm md:text-base">
             Our Feedback
           </button>
         </div>
