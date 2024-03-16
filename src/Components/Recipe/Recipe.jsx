@@ -49,7 +49,7 @@ function Recipe({ recipe, handleCook }) {
         <button
           onClick={() => handleCook(recipe)}
           type="button"
-          className="mt-4 w-full rounded-md bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          className="bg-[#0BE58A] px-4 py-2 rounded-md mt-3 text-base font-semibold hover:bg-[#40906f] hover:text-black active:bg-[#41c78f]"
         >
           Want to Cook
         </button>
