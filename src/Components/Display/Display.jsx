@@ -1,5 +1,5 @@
 function Display({ btnRecipes, handlePreparing, deleteItems }) {
-  console.log(deleteItems);
+  // console.log(deleteItems)
   return (
     <div className=" m-3 md:m-6">
       <div>
@@ -64,6 +64,16 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
                 </tr>
               );
             })}
+            <tr>
+              <td>
+                Total time:
+                {deleteItems?.reduce(
+                  (a, c) => console.log(a, c[0].preparing_time.split(' ')[0]),
+                  0
+                )}
+              </td>
+              <td>Total Calories: </td>
+            </tr>
           </tbody>
         </table>
       </div>
