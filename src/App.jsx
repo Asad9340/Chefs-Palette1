@@ -20,7 +20,7 @@ function App() {
       setBtnRecipes([...btnRecipes, recipe]);
       toast.success('Item added successfully', {
         position: 'top-right',
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -31,7 +31,7 @@ function App() {
     } else {
       toast.warn('Items Already Exist', {
         position: 'top-right',
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -50,7 +50,7 @@ function App() {
     setBtnRecipes(newItems);
     toast.info('Item is now under cooking', {
       position: 'top-right',
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -79,10 +79,10 @@ function App() {
       <Hero></Hero>
       <OurRecipes></OurRecipes>
       <div className="flex flex-col md:grid gap-4 grid-cols-12 max-w-6xl mx-auto">
-        <div className="col-span-8">
+        <div className="col-span-7">
           <Recipes recipes={recipes} handleCook={handleCook}></Recipes>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-5">
           <Display
             btnRecipes={btnRecipes}
             handlePreparing={handlePreparing}
@@ -92,7 +92,7 @@ function App() {
       </div>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

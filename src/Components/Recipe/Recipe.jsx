@@ -15,7 +15,7 @@ function Recipe({ recipe, handleCook }) {
       <img
         src={recipe_image}
         alt="Laptop"
-        className=" h-48 w-full rounded-md object-cover"
+        className=" h-40 w-full rounded-md object-cover"
       />
       <div className="p-4">
         <h1 className="inline-flex items-center text-lg font-semibold">
@@ -39,11 +39,11 @@ function Recipe({ recipe, handleCook }) {
         <div className="mt-4 flex gap-3 justify-between">
           <div className="flex gap-2 items-center">
             <MdAccessTimeFilled />
-            <p>{preparing_time} min</p>
+            <p>{preparing_time}</p>
           </div>
           <div className="flex gap-2 items-center">
             <BsFire />
-            <p>{calories} calories</p>
+            <p>{calories}</p>
           </div>
         </div>
         <button

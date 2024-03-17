@@ -1,9 +1,9 @@
 function Display({ btnRecipes, handlePreparing, deleteItems }) {
   return (
-    <div className="mx-4 mb-6">
+    <div className="mx-2 mb-6 border p-2 rounded-lg mt-6">
       <div>
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold text-center">
+          <h3 className="text-xl md:text-2xl font-bold text-center">
             Want to cook: {btnRecipes.length}
           </h3>
           <hr className="my-4 mx-6" />
@@ -21,7 +21,7 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
           <tbody>
             {btnRecipes?.map((item, index) => {
               return (
-                <tr key={index} className=" text-sm">
+                <tr key={index} className=" text-sm bg-[#28282808] rounded-lg">
                   <th className=" pr-2 font-normal">{index + 1}</th>
                   <td className=" pr-2">{item.recipe_name}</td>
                   <td className=" pr-2">{item.preparing_time}</td>
@@ -42,7 +42,7 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
       </div>
       <div className="mt-6 md:mt-10">
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold text-center">
+          <h3 className="text-xl md:text-2xl font-bold text-center">
             Currently cooking: {deleteItems.length}
           </h3>
           <hr className="my-4 mx-6" />
@@ -69,19 +69,26 @@ function Display({ btnRecipes, handlePreparing, deleteItems }) {
                 </tr>
               );
             })}
-            <tr className="bg-gray-200">
-              <td></td>
-              <td>
-                Total time:
-                {deleteItems.reduce((a, c) => a + c[0].preparing_time, 0)} min
-              </td>
-              <td colSpan={2}>
-                Total Calories:{' '}
-                {deleteItems.reduce((a, c) => a + c[0].calories, 0)} calories
-              </td>
-            </tr>
           </tbody>
         </table>
+        <div className="flex justify-between  gap-1 bg-gray-200 rounded-lg p-2 mt-2">
+          <p>
+            Total time={' '}
+            {deleteItems.reduce(
+              (a, c) => a + Number(c[0].preparing_time.split(' ')[0]),
+              0
+            )}
+            minutes
+          </p>
+          <p>
+            Total Calories={' '}
+            {deleteItems.reduce(
+              (a, c) => a + Number(c[0].calories.split(' ')[0]),
+              0
+            )}{' '}
+            calories
+          </p>
+        </div>
       </div>
     </div>
   );
