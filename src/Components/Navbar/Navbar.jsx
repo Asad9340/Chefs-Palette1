@@ -25,7 +25,7 @@ function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold"
             >
               <li>
                 <a>Home</a>
@@ -41,12 +41,12 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl md:text-3xl font-bold">
-            Chefs Palette
+          <a className=" text-xl md:text-3xl font-bold">
+            Chefs<span className="text-[#0BE58A]">P</span>alette
           </a>
         </div>
         <div className="navbar-center hidden lg:flex text-slate-900 text-opacity-70 ">
-          <ul className="menu menu-horizontal px-1 text-base ">
+          <ul className="menu menu-horizontal px-1 text-base font-semibold">
             <li>
               <a>Home</a>
             </li>
@@ -67,7 +67,7 @@ function Navbar() {
               type="text"
               className="border border-red-800 h-10 rounded-full hidden md:block pl-10"
               name=""
-              placeholder='Search here...'
+              placeholder="Search here..."
             />
             <CiSearch className="absolute top-3 left-4 text-lg  hidden md:block" />
           </div>
